@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne+Mono&display...');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyan: #00e5ff;
+  --cyan-dim: rgba(0,229,255,0.12);
+  --emerald: #00e676;
+  --amber: #ffab40;
+  --rose: #ff4f70;
+  --violet: #b388ff;
+  --bg: #080c14;
+  --glass: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.08);
+  --border-active: rgba(0,229,255,0.4);
+  --text: #e8edf5;
+  --text-dim: rgba(232,237,245,0.5);
+  --text-muted: rgba(232,237,245,0.3);
+  --font: 'Space Grotesk', sans-serif;
+  --mono: 'Syne Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+body {
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 10%, rgba(0,80,120,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 80%, rgba(80,0,120,0.14) 0%, transparent 60%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+@keyframes pulse  { 0%,100%{opacity:1} 50%{opacity:0.4} }
+@keyframes blink  { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes shimmer{ 0%,100%{opacity:0.4} 50%{opacity:0.8} }
